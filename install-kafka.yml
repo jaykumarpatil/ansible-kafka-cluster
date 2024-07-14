@@ -1,10 +1,10 @@
 ---
-- name: Apache Kafka kafka_2.13-3.1.0 playbook install Red Hat 8.4
+- name: Apache Kafka kafka_2.13-3.7.1 playbook install Ubuntu
   hosts: RedHat8-5nodes
   remote_user: root
   vars:
     package_name: kafka
-    package_version: kafka_2.13-3.1.0
+    package_version: kafka_2.13-3.7.1
     
 
   tasks:
@@ -20,14 +20,14 @@
 
   - name: Copy binary to /opt
     ansible.builtin.copy:
-      src: kafka_2.13-3.1.0.tgz
+      src: kafka_2.13-3.7.1.tgz
       dest: /opt
       owner: kafka
       group: kafka
 
   - name: Extract binary
     ansible.builtin.unarchive:
-      src: /opt/kafka_2.13-3.1.0.tgz
+      src: /opt/kafka_2.13-3.7.1.tgz
       dest: /opt
       owner: kafka
       group: kafka
@@ -35,7 +35,7 @@
 
   - name: Create symbolic link to folder kafka
     shell: |
-      ln -s /opt/kafka_2.13-3.1.0 /opt/kafka
+      ln -s /opt/kafka_2.13-3.7.1 /opt/kafka
       chown -R kafka:kafka /opt/kafka*
 
   - name: Createt Zookeeper system service

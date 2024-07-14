@@ -1,3 +1,5 @@
+wget https://downloads.apache.org/kafka/3.7.1/kafka_2.13-3.7.1.tgz
+
 # ansible-inventory command to validate and obtain information about your Ansible inventory:
 
 ansible-inventory -i inventory --list

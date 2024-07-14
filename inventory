@@ -1,5 +1,5 @@
 # VMs Ubuntu
 [Ubuntu–3nodes]
-server-1
-server-2
-server-3
+server-ubuntu-node-1
+server-ubuntu-node-2
+server-ubuntu-node-3
