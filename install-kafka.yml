@@ -8,6 +8,20 @@
     
 
   tasks:
+  
+  - name: Update APT package manager repositories cache
+    become: true
+    apt:
+      update_cache: yes
+  
+  - name: Install Java using Ansible
+    become: yes
+    apt:
+      name: "{{ packages }}"
+      state: present
+    vars:
+      packages:
+          - openjdk-11-jdk
 
   - name: Create kafka user and data folders
     shell: |
