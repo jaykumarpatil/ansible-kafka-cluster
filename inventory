@@ -1,5 +1,5 @@
 # VMs Ubuntu
 [ubuntu-cluster]
-server-ubuntu-node-1
-server-ubuntu-node-2
-server-ubuntu-node-3
+ubuntu-node-1
+ubuntu-node-2
+ubuntu-node-3
